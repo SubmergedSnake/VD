@@ -34,8 +34,8 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  secondary:    #FFB6C1,
+  primary:  #222,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222
@@ -53,7 +53,9 @@ $colors: (
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
+$loading-md-background:color($colors, secondary);
+$loading-md-spinner-color:color($colors, light);
+$tabs-md-tab-icon-color-active:color($colors, light);
 
 
 // App Windows Variables
@@ -86,3 +88,12 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
+@font-face {
+  font-family: "Daniel-Regular-webfont";
+  src: url($font-path+'/Daniel-Regular-webfont.woff');
+}
+
+$global-text: "Daniel-Regular-webfont";
+$content-size: 20px;

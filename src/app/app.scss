@@ -14,3 +14,30 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+.toolbar-title.toolbar-title-md, .tabbar{ color:color($colors, light);
+                                font-family:$global-text;}
+.scroll-content > * {font-family:$global-text;font-size:$content-size;color:color($colors, primary);}
+
+div > .label{font-family:$global-text;font-size:$content-size;color:color($colors, primary);}
+
+    .toolbar-background {background:color($colors, primary);}
+
+    .tabbar > a {background:color($colors, primary);}
+    .tabbar > a > .tab-button-icon {color:color($colors, light);}
+    .tabbar > a > .tab-button-text {color:color($colors, light);}
+
+    .logo{width:40px;height:auto;padding:0;}
+
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    
+
+   
+
+

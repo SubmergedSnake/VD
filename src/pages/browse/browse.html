@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>     
+    <ion-title float-left> 
+      Browse diary
+    </ion-title>
+    <img float-right class="logo" src="assets/imgs/vd.png"/>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    
+    
+    <div *ngIf="entries">
+      <a margin ion-item *ngFor="let entry of entries;let i = index;"  ion-item (click)="presentModal(i)">
+      <img class="listthumb" src="{{entry.imageurl}}"/>  {{entry.title | slice:0:35}}
+    </a>
+  </div>
+      
+  </ion-list>
+</ion-content>
+
+s

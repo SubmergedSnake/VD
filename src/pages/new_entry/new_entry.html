@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title float-left>
+      Post a new entry
+    </ion-title>
+    <img float-right class="logo" src="assets/imgs/vd.png" />
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   
+    
+  <form (ngSubmit)="saveEntry()">
+
+
+      <button ion-button round large  class="center" type="button" (click)="takePicture()">  <ion-icon name="camera"></ion-icon></button>
+    
+      <!--<ion-input type="hidden" formControlName = "thumbnail"></ion-input>-->
+      
+      <ion-item>
+        <ion-thumbnail >
+            <img class="center" [src]="entry.imageurl"/>
+          </ion-thumbnail>
+      </ion-item>
+      <ion-input hidden [(ngModel)]="entry.imageurl" name="imageurl"></ion-input>
+        <div floating class="small" *ngIf="temperature">{{temp}} C°</div>   
+        <ion-input hidden [(ngModel)]="entry.temperature" name="temperature" ></ion-input>
+      
+        <div floating class="small" *ngIf="formatted_address">{{formatted_address}}</div>
+        <ion-input hidden [(ngModel)]="entry.location" name="location"></ion-input>
+     
+    <ion-item>
+      <ion-label floating>Title</ion-label>
+      <ion-input [(ngModel)]="entry.title" name="title"></ion-input>
+    </ion-item>
+    
+
+    <ion-item>
+      <ion-label floating>Description{{image}}</ion-label>
+      <ion-textarea [(ngModel)]="entry.description" name="description"></ion-textarea>
+    </ion-item>
+    <ion-item text-center>
+      <button ion-button large color="secondary" type="submit">Save</button>
+    </ion-item>
+  </form>
+</ion-content>
